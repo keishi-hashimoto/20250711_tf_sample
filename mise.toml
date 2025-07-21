@@ -1,0 +1,21 @@
+[tools]
+terraform = "1.2.9"
+pre-commit = "latest"
+
+[env]
+'_'.file = ".env"
+
+[tasks.init]
+run = "terraform init --backend-config=state.config"
+
+[tasks.plan]
+run = "terraform plan"
+
+[tasks.apply]
+run = "terraform apply"
+
+[tasks.destroy]
+run = "terraform destroy"
+
+[tasks.pre-commit]
+run = "pre-commit"
