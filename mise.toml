@@ -1,12 +1,13 @@
 [tools]
 terraform = "1.2.9"
 pre-commit = "latest"
+actionlint = "latest"
 
 [env]
 '_'.file = ".env"
 
 [tasks.init]
-run = "terraform init --backend-config=state.config"
+run = "terraform init -backend-config=state.config"
 
 [tasks.plan]
 run = "terraform plan"
