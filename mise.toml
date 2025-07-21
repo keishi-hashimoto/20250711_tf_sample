@@ -7,7 +7,7 @@ actionlint = "latest"
 '_'.file = ".env"
 
 [tasks.init]
-run = "terraform init --backend-config=state.config"
+run = "terraform init -backend-config=state.config"
 
 [tasks.plan]
 run = "terraform plan"
