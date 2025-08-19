@@ -27,7 +27,7 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
           role-session-name: gha-sample
       - name: Set up mise
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v3
       - name: init
         run: terraform init -backend-config="bucket=${{ secrets.BUCKET_NAME }}" -backend-config="key=${{ secrets.BUCKET_KEY }}" -backend-config="region=${{ secrets.AWS_DEFAULT_REGION }}"
       - name: plan
